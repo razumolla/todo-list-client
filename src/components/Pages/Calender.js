@@ -12,9 +12,9 @@ const Calender = () => {
 
     return (
         <>
-            <div class="hero min-h-screen ">
-                <div class="hero-content text-center">
-                    <div class="max-w-md">
+            <div className="hero min-h-screen ">
+                <div className="hero-content text-center">
+                    <div className="max-w-md">
 
                         <DayPicker
                             mode="single"
