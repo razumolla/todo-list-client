@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import DeleteWork from './DeleteWork';
 
 const CompletedTasks = () => {
+    const [works, setWorks] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/completed')
+            .then(res => res.json())
+            .then(data => setWorks(data));
+    }, [])
+
     return (
         <div className='min-h-screen'>
-            <h3>From Completed Tasks</h3>
+            <div className="overflow-x-auto mt-5">
+                <table className="table w-full">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Name</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {
+                            works.map((work, index) => <DeleteWork
+                                key={work._id}
+                                work={work}
+                                index={index}
+                            ></DeleteWork>)
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     );
 };

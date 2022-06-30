@@ -29,6 +29,7 @@ const ToDoList = () => {
             });
 
         toast('Work task successfully added');
+        window.location.reload(true);
     }
 
     return (
@@ -47,14 +48,14 @@ const ToDoList = () => {
             <hr />
 
             <div className='mt-5'>
-                <div class="overflow-x-auto w-full">
-                    <table class="table w-full">
+                <div className="overflow-x-auto w-full">
+                    <table className="table w-full">
 
                         <thead>
                             <tr>
                                 <th>
                                     <label>
-                                        {/* <input type="checkbox" class="checkbox" /> */}
+                                        {/* <input type="checkbox" className="checkbox" /> */}
                                     </label>
                                 </th>
                                 <th>Task-Name</th>
