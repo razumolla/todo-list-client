@@ -13,8 +13,7 @@ function App() {
     <div className='max-w-7xl mx-auto px-12'>
       <Navbar></Navbar>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<ToDoList />} />
         <Route path="/todolist" element={<ToDoList />} />
         <Route path="/completedtasks" element={<CompletedTasks />} />
         <Route path="/calender" element={<Calender />} />

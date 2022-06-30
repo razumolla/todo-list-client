@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <footer class="footer footer-center p-10 bg-blue-100 text-base-content rounded">
                 <div class="grid grid-flow-col gap-4">
-                    <Link to="/home" class="link link-hover">Home</Link>
+                    <Link to="/" class="link link-hover">ToDo List</Link>
                     <Link to="/completedtasks" class="link link-hover">Completed Tasks</Link>
                     <Link to="/calender" class="link link-hover">Calender</Link>
                     <Link to="/about" class="link link-hover"> About</Link>

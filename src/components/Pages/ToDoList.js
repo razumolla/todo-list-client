@@ -2,7 +2,7 @@ import React from 'react';
 
 const ToDoList = () => {
     return (
-        <div>
+        <div className='min-h-screen'>
             This is todo list
         </div>
     );
