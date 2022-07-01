@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import useWorks from '../../hooks/useWorks';
+import { Link } from 'react-router-dom';
 
 const SingleWork = ({ work }) => {
     const [works, setWorks] = useWorks();
@@ -48,8 +49,7 @@ const SingleWork = ({ work }) => {
         setChange(!change)
     }
 
-
-
+   
     return (
         <tr>
             <th>
@@ -66,7 +66,8 @@ const SingleWork = ({ work }) => {
             </td>
 
             <th>
-                <button className="btn btn-ghost btn-xs">Edit</button>
+              
+                <Link to={`/update/${_id}`}><button> Update </button></Link>
             </th>
             <th>
                 <button disabled={!change} onClick={() => handleDelete(_id)} className="btn btn-ghost btn-xs">Done</button>

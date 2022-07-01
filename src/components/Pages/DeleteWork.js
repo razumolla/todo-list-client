@@ -7,7 +7,7 @@ const DeleteWork = ({ work, index }) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td>{dName}</td>
+            <td style={{textDecorationLine: 'line-through'}}>{dName}</td>
         </tr>
     );
 };
