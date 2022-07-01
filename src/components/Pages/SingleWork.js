@@ -11,7 +11,7 @@ const SingleWork = ({ work }) => {
 
         // post from todo list to completed route
         const dName = name;
-        const url = 'http://localhost:5000/completed';
+        const url = 'https://aqueous-crag-10378.herokuapp.com/completed';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
@@ -29,7 +29,7 @@ const SingleWork = ({ work }) => {
         // delete from todo list
         const confirm = window.confirm('Are you sure?')
         if (confirm) {
-            const url = `http://localhost:5000/work/${id}`
+            const url = `https://aqueous-crag-10378.herokuapp.com/work/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -49,7 +49,7 @@ const SingleWork = ({ work }) => {
         setChange(!change)
     }
 
-   
+
     return (
         <tr>
             <th>
@@ -66,7 +66,7 @@ const SingleWork = ({ work }) => {
             </td>
 
             <th>
-              
+
                 <Link to={`/update/${_id}`}><button> Update </button></Link>
             </th>
             <th>

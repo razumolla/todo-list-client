@@ -6,20 +6,20 @@ const UpdateWork = () => {
     const { id } = useParams();
     const [work, setWork] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/work/${id}`
+        const url = `https://aqueous-crag-10378.herokuapp.com/work/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setWork(data))
     }, []);
-    
+
 
     const handleUpdateUser = event => {
         event.preventDefault();
         const name = event.target.name.value;
-       
+
         const updatedUser = { name };
         //
-        const url = `http://localhost:5000/work/${id}`;
+        const url = `https://aqueous-crag-10378.herokuapp.com/work/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -39,7 +39,7 @@ const UpdateWork = () => {
             <form onSubmit={handleUpdateUser}>
                 <input type="text" className='border p-3 m-2' name="name" placeholder='New Task Name' required />
                 <br />
-               
+
                 <button type="submit" className="btn btn-sm btn-secondary m-2">Update Task</button>
             </form>
         </div>

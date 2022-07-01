@@ -12,7 +12,7 @@ const ToDoList = () => {
         event.preventDefault();
         const name = event.target.name.value;
 
-        const url = 'http://localhost:5000/work';
+        const url = 'https://aqueous-crag-10378.herokuapp.com/work';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
